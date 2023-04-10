@@ -1,0 +1,79 @@
+body{
+    background-image: url(../img/spaceBackgound.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+}
+.flex{
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+.logo{
+    margin: 2rem;
+}
+.primary-header{
+    align-items: center;
+    justify-content: space-between;
+}
+.primary-navigation{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(0.15em);
+}
+.primary-navigation a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.6em;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.mobile-nav-toggle{
+    display: none;
+
+}
+li{
+    padding: 0.5em 1.5em 0.5em 1.5em;
+}
+@media (max-width: 35em) {
+    .primary-navigation {
+        z-index: 1000;
+        position:  fixed;
+        inset: 0 0 0 30%;
+        --gap: 3em;
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;
+
+        transform: translateX(100%);
+        transition: transform 350ms ease-in;
+    }
+    .primary-navigation a {
+        text-decoration: none;
+        color: white;
+        font-size: 1em;
+        font-family: 'Share Tech Mono', monospace;
+    }
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+    .primary-navigation[aria-expanded="true"]{
+        background: url("img/x_icon.png");
+    }
+    .mobile-nav-toggle {
+        display: block;
+        z-index: 9999;
+        position: absolute;
+        background: url("img/hamburger_icon.png");
+        background-repeat: no-repeat;
+        border: 0;
+        width: 2rem ;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+    }
+    .mobile-nav-toggle:hover{
+        cursor: pointer;
+    }
+}
+
