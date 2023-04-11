@@ -1,5 +1,5 @@
 body{
-    background-image: url(../img/spaceBackgound.jpg);
+    background-image: url('/img/bg.png');
     background-size:cover;
     background-attachment: fixed;
 }
@@ -36,34 +36,21 @@ body{
 li{
     padding: 0.5em 1.5em 0.5em 1.5em;
 }
-.jumbotron {
-    position: relative;
-    overflow: hidden;
-    background-color:black;
+
+
+
+  .col, #hero{
+    
+    
     font-family: 'Share Tech Mono', monospace;
-  }
-  .jumbotron video {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    width:100%;
-    height:100%;
-    /*  object-fit is not supported on IE  */
-    object-fit: cover;
-    opacity:.75;
-  }
-  .jumbotron .container {
-    z-index: 2;
-    position: relative;
+    color: white;
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(0.15em);
+    padding: 2rem;
+    
   }
   
-  .col{
-    background-color:darkgray;
-    opacity: .75;
-    font-family: 'Share Tech Mono', monospace;
-    
-    
-  }
+  
   
 @media (max-width: 35em) {
     .primary-navigation {
