@@ -16,7 +16,7 @@ body{
 }
 .primary-navigation{
     list-style: none;
-    padding: 0;
+    padding: 2em;
     margin: 0;
 
     background: hsl(0 0% 100% / 0.1);
@@ -28,6 +28,16 @@ body{
     font-size: 1.6em;
     font-family: 'Share Tech Mono', monospace;
 }
+.coc{
+    font-family: 'Share Tech Mono', monospace;
+  }
+  #paddingright{
+    padding-right: 2em;
+  }
+  .blurredbg{
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(0.15em);
+  }
 
 .mobile-nav-toggle{
     display: none;
